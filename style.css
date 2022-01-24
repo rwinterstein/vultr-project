@@ -66,6 +66,7 @@ li {
     align-items: center;
     box-sizing: border-box;
     border: none;
+    transition: ease 300ms;
 }
 
 .btn a {
@@ -73,36 +74,51 @@ li {
     text-decoration: none;
 }
 
-.btn--primary {
-    color: #ffffff;
-    background-color: #007bfc;
-}
-
-.btn--outline {
-    outline: 1px solid rgba(223, 226, 235, 0.32);
-}
-
-.btn--sm {
-    width: fit-content;
-    border-radius: 2px;
+.btn--sm a {
     padding-top: 10px;
     padding-right: 20px;
     padding-bottom: 10px;
     padding-left: 20px;
 }
 
-.btn--lg {
-    width: fit-content;
-    border-radius: 3px;
+.btn--lg a {
     padding-top: 16px;
     padding-right: 32px;
     padding-bottom: 16px;
     padding-left: 32px;
 }
 
+.btn--primary {
+    color: #ffffff;
+    background-color: #007bfc;
+}
+
+.btn--primary:hover {
+    background-color: #51b9ff;
+}
+
+.btn--outline {
+    outline: 1px solid rgba(223, 226, 235, 0.32);
+}
+
+.btn--outline:hover {
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
+    outline-color: rgba(223, 226, 235, 0.64);
+}
+
+.btn--sm {
+    width: fit-content;
+    border-radius: 2px;
+}
+
+.btn--lg {
+    width: fit-content;
+    border-radius: 3px;
+}
+
 /* Navbar */
 .navbar {
-    display: flex;
     background: linear-gradient(90deg, #021048 0%, #1e38a3 100%);
     padding-top: 16px;
     padding-right: 48px;
@@ -158,6 +174,15 @@ li {
     padding-right: 14px;
     padding-bottom: 6px;
     padding-left: 14px;
+    transition: ease 300ms;
+}
+
+.nav__item.btn {
+    padding: 0;
+}
+
+.nav__link:hover {
+    color: #007bfc;
 }
 
 .nav__icon {
@@ -189,6 +214,7 @@ li {
     padding-right: 20px;
     padding-bottom: 10px;
     padding-left: 20px;
+    transition: ease 300ms;
 }
 
 .nav__back-link .icon {
@@ -198,11 +224,10 @@ li {
 .nav__back-link .fill {
     fill: #8692b0;
 }
+
 .nav__back-link:hover {
     background-color: rgba(0, 0, 0, 0.25);
-}
-.nav__back-link:hover .fill {
-    fill: #007bfc;
+    color: inherit;
 }
 
 .banner__content {
@@ -215,4 +240,10 @@ li {
 }
 
 .banner__content .btn {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    line-height: 28px;
+    margin-top: 40px;
+    padding: 0;
 }
