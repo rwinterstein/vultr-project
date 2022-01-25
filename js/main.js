@@ -63,3 +63,21 @@ $('#remove_education').click(function (e) {
         $('#remove_education').removeClass('show_remove_btn');
     }
 });
+
+/**
+ * Show additional input field if the user
+ * selects 'yes' for employee referral question
+ */
+
+let referralInputField =
+'<div class="col-sm-12 col-md-6 referral_name" id="referral_name">'
++'<input type="text" name="referral" id="referral">'
++'</div>';
+
+$('#referral_yes').click(function (e) {
+    $(referralInputField).insertAfter($('#referral_yes').closest('.radio__option'));
+});
+
+$('#referral_no').click(function (e) {
+    $('#referral_name').remove();
+});
