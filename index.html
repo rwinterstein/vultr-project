@@ -14,7 +14,7 @@
 <body>
     <!-- Nav -->
     <div class="navbar col-12">
-        <div class="container">
+        <div class="container mobile__nav">
             <div class="navbar__logo">
                 <img src="img/logo__on-dark.png" alt="Vultr logo">
             </div>
@@ -78,14 +78,20 @@
                     <li class="nav__item btn btn--sm btn--primary">
                         <a href="https://www.vultr.com/company/contact/sales/">Contact Sales</a>
                     </li>
+
                 </ul>
             </nav>
+        </div>
+        <div class="mobile__nav_btn">
+            <i>
+                <img src="img/menu__icon.png" alt="menu icon">
+            </i>
         </div>
     </div>
 
     <!-- Header -->
     <header class="banner col-12">
-        <div class="container">
+        <div class="container col-11 col-md-9">
             <div class="nav__item nav__back">
                 <a class="nav__back-link" href="https://www.vultr.com/company/careers/#listings">
                     <i class="icon">
@@ -122,6 +128,9 @@
                 </p>
                 <p>
                     Our engineers are critical-thinking, detail-oriented problem solvers with a keen eye for detail. They are intricate in keeping the day-to-day operations running smoothly as well as foreseeing and capitalizing on future opportunities for platform growth.
+                </p>
+                <p>
+                    <i>Salary Range: $50,000 - $70,000</i>
                 </p>
                 <p>
                     <i>You'll be able to work remotely in the United States or at our West Palm Beach, Florida office.</i>
@@ -176,32 +185,32 @@
                 <form class="application__form" action="" method="post">
                     <div class="form__section form__info">
                         <h3>Personal Info</h3>
-                        <div class="row">
-                            <div class="col-sm-12 col-md">
+                        <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
+                            <div class="col-sm-12 col-md mb-2 mb-md-0">
                                 <label for="first_name" hidden></label>
-                                <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                                <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
                             </div>
-                            <div class="col-sm-12 col-md">
+                            <div class="col-sm-12 col-md mb-2 mb-md-0">
                                 <label for="last_name" hidden></label>
-                                <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                                <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
                             </div>
-                            <div class="col-sm-12 col-md">
-                                <label for="email" hidden></label>
-                                <input type="email" name="email_address" id="email_address" placeholder="Email Address">
+                            <div class="col-sm-12 col-md mb-2 mb-md-0">
+                                <label for="email_address" hidden></label>
+                                <input type="text" name="email_address" id="email_address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Email Address" required>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12 col-md">
+                        <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
+                            <div class="col-sm-12 col-md mb-2 mb-md-0">
                                 <label for="phone_number" hidden></label>
-                                <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" onblur="formatNum(this)">
+                                <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
                             </div>
-                            <div class="col-sm-12 col-md-8">
+                            <div class="col-sm-12 col-md-8 col-md mb-2 mb-md-0">
                                 <label for="address" hidden></label>
-                                <input type="text" name="address" id="address" placeholder="Address">
+                                <input type="text" name="address" id="address" placeholder="Address" required>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
+                        <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
+                            <div class="col col-md mb-2 mb-md-0">
                                 <label for="headline" hidden></label>
                                 <input type="text" name="headline" id="headline" placeholder="Headline (optional)">
                             </div>
@@ -210,53 +219,51 @@
 
                     <div class="form__section form__profile">
                         <h3>Profile</h3>
-                        <div class="row">
+                        <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
                             <div class="col">
                                 <label for="resume">Upload Resume</label>
-                                <input type="file" name="resume" id="resume">
+                                <input type="file" name="resume" id="resume" required>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
+                            <div class="col">
+                                <label for="links">Please provide some URLs that showcase your previous development projects (Example: GitHub, Personal websites, etc.)</label>
+                                <textarea name="links" id="links" rows="4" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
                             <div class="col">
                                 <label for="summary" hidden></label>
                                 <textarea name="summary" id="summary" rows="4" placeholder="Summary (optional)"></textarea>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="links">Please provide some URLs that showcase your previous development projects (Example: GitHub, Personal websites, etc.)</label>
-                                <textarea name="links" id="links" rows="4"></textarea>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="form__section form__education">
-                        <h3>Education</h3>
+                        <h3>Education <span class="optional">(Optional)</span></h3>
                         <div class="education__group">
-                            <div class="row">
-                                <div class="col-sm-12 col-md">
+                            <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
+                                <div class="col-sm-12 col-md mb-2 mb-md-0">
                                     <label for="school" hidden></label>
                                     <input type="text" name="school" id="school" placeholder="School">
                                 </div>
-                                <div class="col-sm-12 col-md">
-                                    <label for="start_date" hidden></label>
-                                    <input type="date" name="start_date" id="start_date">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md">
+                                <div class="col-sm-12 col-md mb-2 mb-md-0">
                                     <label for="field_of_study" hidden></label>
                                     <input type="text" name="field_of_study" id="field_of_study" placeholder="Field of Study">
                                 </div>
-                                <div class="col-sm-12 col-md">
-                                    <label for="end_date" hidden></label>
-                                    <input type="date" name="end_date" id="end_date">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12 col-md-6">
+                                <div class="col-sm-12 col-md mb-2 mb-md-0">
                                     <label for="Degree" hidden></label>
                                     <input type="text" name="Degree" id="Degree" placeholder="Degree">
+                                </div>
+                            </div>
+                            <div class="row mt-0 mb-0 mt-md-3 mb-md-3">
+                                <div class="col-sm-12 col-md-4 mb-2 mb-md-0">
+                                    <label for="start_date" hidden></label>
+                                    <input type="date" name="start_date" id="start_date">
+                                </div>
+                                <div class="col-sm-12 col-md-4 mb-2 mb-md-0">
+                                    <label for="end_date" hidden></label>
+                                    <input type="date" name="end_date" id="end_date">
                                 </div>
                             </div>
                         </div>
@@ -272,7 +279,7 @@
                             <div class="col">
                                 <p>Are you a resident of NJ or FL?</p>
                                 <div class="radio__option">
-                                    <input type="radio" name="location_nj_fl" id="location_nj_fl_yes" value="Yes">
+                                    <input type="radio" name="location_nj_fl" id="location_nj_fl_yes" value="Yes" required>
                                     <label for="location_nj_fl_yes">Yes</label>
                                 </div>
                                 <div class="radio__option">
@@ -285,7 +292,7 @@
                             <div class="col">
                                 <p>Will you now or in the future require sponsorship for employment visa status (e.g., H-1B visa status)?</p>
                                 <div class="radio__option">
-                                    <input type="radio" name="visa_status" id="visa_status_yes" value="Yes">
+                                    <input type="radio" name="visa_status" id="visa_status_yes" value="Yes" required>
                                     <label for="visa_status_yes">Yes</label>
                                 </div>
                                 <div class="radio__option">
@@ -298,7 +305,7 @@
                             <div class="col">
                                 <p>Have you ever been convicted of any criminal offenses?</p>
                                 <div class="radio__option">
-                                    <input type="radio" name="convictions" id="convictions_yes" value="Yes">
+                                    <input type="radio" name="convictions" id="convictions_yes" value="Yes" required>
                                     <label for="convictions_yes">Yes</label>
                                 </div>
                                 <div class="radio__option">
@@ -311,7 +318,7 @@
                             <div class="col">
                                 <p>Did one of our employees advise you of the job and if so who?</p>
                                 <div class="radio__option">
-                                    <input type="radio" name="referral" id="referral_yes" value="Yes">
+                                    <input type="radio" name="referral" id="referral_yes" value="Yes" required>
                                     <label for="referral_yes">Yes</label>
                                 </div>
                                 <div class="radio__option">
