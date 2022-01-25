@@ -1,33 +1,38 @@
-let educationTemplate  =
-'                        <div class="education__group">'
-+'                            <div class="row">'
-+'                                <div class="col-sm-12 col-md">'
-+'                                    <label for="school" hidden></label>'
-+'                                    <input type="text" name="school" id="school" placeholder="School">'
-+'                                </div>'
-+'                                <div class="col-sm-12 col-md">'
-+'                                    <label for="start_date" hidden></label>'
-+'                                    <input type="text" name="start_date" id="start_date" placeholder="Start Date">'
-+'                                </div>'
-+'                            </div>'
-+'                            <div class="row">'
-+'                                <div class="col-sm-12 col-md">'
-+'                                    <label for="field_of_study" hidden></label>'
-+'                                    <input type="text" name="field_of_study" id="field_of_study" placeholder="Field of Study">'
-+'                                </div>'
-+'                                <div class="col-sm-12 col-md">'
-+'                                    <label for="end_date" hidden></label>'
-+'                                    <input type="text" name="end_date" id="end_date" placeholder="End Date">'
-+'                                </div>'
-+'                            </div>'
-+'                            <div class="row">'
-+'                                <div class="col-sm-12 col-md-6">'
-+'                                    <label for="Degree" hidden></label>'
-+'                                    <input type="text" name="Degree" id="Degree" placeholder="Degree">'
-+'                                </div>'
-+'                            </div>'
-+'                        </div>'
-;
+/**
+ * Allow user to add additional educations
+ * and update control buttons based on how
+ * many educations are currently displayed
+ */
+
+let educationTemplate =
+'<div class="education__group">'
++'<div class="row">'
++'<div class="col-sm-12 col-md">'
++'<label for="school" hidden></label>'
++'<input type="text" name="school" id="school" placeholder="School">'
++'</div>'
++'<div class="col-sm-12 col-md">'
++'<label for="start_date" hidden></label>'
++'<input type="date" name="start_date" id="start_date" placeholder="Start Date">'
++'</div>'
++'</div>'
++'<div class="row">'
++'<div class="col-sm-12 col-md">'
++'<label for="field_of_study" hidden></label>'
++'<input type="text" name="field_of_study" id="field_of_study" placeholder="Field of Study">'
++'</div>'
++'<div class="col-sm-12 col-md">'
++'<label for="end_date" hidden></label>'
++'<input type="date" name="end_date" id="end_date" placeholder="End Date">'
++'</div>'
++'</div>'
++'<div class="row">'
++'<div class="col-sm-12 col-md-6">'
++'<label for="Degree" hidden></label>'
++'<input type="text" name="Degree" id="Degree" placeholder="Degree">'
++'</div>'
++'</div>'
++'</div>';
 
 let educationCount = 1;
 
