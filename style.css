@@ -281,6 +281,7 @@ input.btn--lg {
     padding: 0;
 }
 
+/* Application */
 .section__application h3 {
     margin-bottom: 16px;
 }
@@ -311,6 +312,12 @@ input.btn--lg {
     padding-left: 16px;
 }
 
+.form__section input:focus-visible,
+.form__section textarea:focus-visible {
+    outline: 2px solid #007bfc;
+    outline-offset: -2px;
+}
+
 .form__section .btn__group .btn {
     margin-right: 12px;
 }
@@ -322,6 +329,36 @@ input.btn--lg {
 form button {
     padding-top: 6px !important;
     padding-bottom: 6px !important;
+}
+
+input#resume {
+    border: 0;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+input::-webkit-file-upload-button {
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #ffffff;
+    background-color: #007bfc;
+    border-radius: 2px;
+    border: none;
+    margin-right: 16px;
+    padding-top: 6px;
+    padding-right: 20px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    transition: ease-in-out 150ms;
+}
+
+input::-webkit-file-upload-button:hover {
+    background-color: #51b9ff;
 }
 
 form button#remove_education {
@@ -346,4 +383,22 @@ form textarea {
 
 form ::placeholder {
     color: rgba(82, 86, 102, 0.5);
+}
+
+form .radio__option {
+    margin-bottom: 8px;
+}
+
+.radio__option input {
+    width: unset;
+    margin-right: 12px;
+}
+
+.radio__option label {
+    color: #525666;
+    margin-bottom: 0;
+}
+
+.referral_name {
+    margin-bottom: 16px;
 }

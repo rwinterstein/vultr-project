@@ -212,7 +212,7 @@
                         <h3>Profile</h3>
                         <div class="row">
                             <div class="col">
-                                <label for="resume" hidden></label>
+                                <label for="resume">Upload Resume</label>
                                 <input type="file" name="resume" id="resume">
                             </div>
                         </div>
@@ -240,7 +240,7 @@
                                 </div>
                                 <div class="col-sm-12 col-md">
                                     <label for="start_date" hidden></label>
-                                    <input type="text" name="start_date" id="start_date" placeholder="Start Date">
+                                    <input type="date" name="start_date" id="start_date">
                                 </div>
                             </div>
                             <div class="row">
@@ -250,7 +250,7 @@
                                 </div>
                                 <div class="col-sm-12 col-md">
                                     <label for="end_date" hidden></label>
-                                    <input type="text" name="end_date" id="end_date" placeholder="End Date">
+                                    <input type="date" name="end_date" id="end_date">
                                 </div>
                             </div>
                             <div class="row">
@@ -263,6 +263,65 @@
                         <div class="btn__group">
                             <button class="btn btn--sm btn--primary" id="add_education">Add Education</button>
                             <button class="btn btn--sm btn--danger" id="remove_education">Remove Education</button>
+                        </div>
+                    </div>
+
+                    <div class="form__section form__details">
+                        <h3>Details</h3>
+                        <div class="row">
+                            <div class="col">
+                                <p>Are you a resident of NJ or FL?</p>
+                                <div class="radio__option">
+                                    <input type="radio" name="location_nj_fl" id="location_nj_fl_yes" value="Yes">
+                                    <label for="location_nj_fl_yes">Yes</label>
+                                </div>
+                                <div class="radio__option">
+                                    <input type="radio" name="location_nj_fl" id="location_nj_fl_no" value="No">
+                                    <label for="location_nj_fl_no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Will you now or in the future require sponsorship for employment visa status (e.g., H-1B visa status)?</p>
+                                <div class="radio__option">
+                                    <input type="radio" name="visa_status" id="visa_status_yes" value="Yes">
+                                    <label for="visa_status_yes">Yes</label>
+                                </div>
+                                <div class="radio__option">
+                                    <input type="radio" name="visa_status" id="visa_status_no" value="No">
+                                    <label for="visa_status_no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Have you ever been convicted of any criminal offenses?</p>
+                                <div class="radio__option">
+                                    <input type="radio" name="convictions" id="convictions_yes" value="Yes">
+                                    <label for="convictions_yes">Yes</label>
+                                </div>
+                                <div class="radio__option">
+                                    <input type="radio" name="convictions" id="convictions_no" value="No">
+                                    <label for="convictions_no">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p>Did one of our employees advise you of the job and if so who?</p>
+                                <div class="radio__option">
+                                    <input type="radio" name="referral" id="referral_yes" value="Yes">
+                                    <label for="referral_yes">Yes</label>
+                                </div>
+                                <div class="referral_name">
+                                    <input type="text" name="referral" id="referral">
+                                </div>
+                                <div class="radio__option">
+                                    <input type="radio" name="referral" id="referral_no" value="No">
+                                    <label for="referral_no">No</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
