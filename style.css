@@ -229,7 +229,6 @@ input.btn--lg {
     min-height: 16px;
     min-width: 16px;
     opacity: 0.4;
-    margin-right: -8px;
     margin-left: 8px;
 }
 
@@ -294,6 +293,7 @@ input.btn--lg {
 
     .mobile__nav {
         display: flex !important;
+        justify-content: space-between !important;
     }
 
     .navbar__menu {
@@ -342,6 +342,12 @@ input.btn--lg {
 
 .nav__back {
     position: absolute;
+}
+
+@media (min-width: 1400px) {
+    .nav__back {
+        margin-left: -112px;
+    }
 }
 
 .nav__back-link {
